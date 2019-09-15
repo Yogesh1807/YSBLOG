@@ -2,6 +2,11 @@ img {
   width: 100%;
 }
 
+.brand_logo{
+  height: 50px;
+  width: 60px;
+}
+
 .footer {
   position: static;
   display: block;

@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 // import { logOutUser } from '../../Actions/authAction';
 // import { clearCurrentProfile } from '../../Actions/profileActions';
+import logo from './../../img/logo.png';
 
 class Navbar extends Component {
-  onLogout(e) {
-    e.preventDefault();
-    // this.props.clearCurrentProfile();
-    // this.props.logOutUser();
-  }
+  // onLogout(e) {
+  //   e.preventDefault();
+  //   this.props.clearCurrentProfile();
+  //   this.props.logOutUser();
+  // }
 
   render() {
     // const { isAuthenticated, user } = this.props.auth;
@@ -19,7 +20,7 @@ class Navbar extends Component {
     //   <ul className="navbar-nav ml-auto">
     //   <li className="nav-item">
     //       <Link className="nav-link" >
-    //         Post Feed
+    //         Post Feed  
     //       </Link>
     //     </li>
     //   <li className="nav-item">
@@ -58,10 +59,10 @@ class Navbar extends Component {
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+      <nav className="navbar navbar-expand-sm navbar-light bg-light mb-4">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            YSBLOG
+            <img src={logo} className="brand_logo" alt="YSBLOG" />
           </Link>
           <button
             className="navbar-toggler"
@@ -75,13 +76,13 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="mobile-nav">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/Developer" >
+                <Link className="nav-link" to="/Blog" >
                   {' '}
-                  Developers
+                  BLOGS
                 </Link>
               </li>
             </ul>
-            {/* {isAuthenticated ? authLinks : guestLinks} */}
+            {guestLinks}
           </div>
         </div>
       </nav>

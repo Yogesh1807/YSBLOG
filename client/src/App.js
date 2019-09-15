@@ -5,7 +5,7 @@ import Navbar from './Components/layout/Navbar';
 import { BrowserRouter as Router, Route } from 'react-router-dom'; 
 import Footer from './Components/layout/Footer'; 
 import Home from './Components/layout/Home'; 
-import Developer from './Components/layout/Developer'; 
+import Blog from './Components/layout/Blog'; 
 
 class App extends Component 
 {
@@ -28,7 +28,7 @@ class App extends Component
         <div className="container-fluid landing">
         <Navbar />
           <Route exact path="/" component={Home} />         
-          <Route exact path="/Developer" component={Developer} />         
+          <Route exact path="/Blog" component={Blog} />         
         <Footer /> 
       </div>      
     </Router>); }
